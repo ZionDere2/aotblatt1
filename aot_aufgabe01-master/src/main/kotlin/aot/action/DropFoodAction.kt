@@ -21,7 +21,7 @@ class DropFoodAction(
         agent.state = AgentState.SEARCHING
         agent.lastMoveSuccessful = true
         agent.recentPositions.clear()
-        agent.energy = 100 // TODO()
+        agent.energy = agent.maxEnergy
 
         return setOf(pos)
     }
