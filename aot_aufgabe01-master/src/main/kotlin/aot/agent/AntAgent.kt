@@ -13,14 +13,15 @@ import java.util.UUID
 class AntAgent(
     val id: UUID = UUID.randomUUID(),
     var capacity: Int = 5,
-    var pos: Position
+    var pos: Position,
+    var maxEnergy: Int = Int.MAX_VALUE
 ) {
 
     var state = AgentState.SEARCHING
 
     var foodAmount = 0
 
-    var energy: Int = Int.MAX_VALUE
+    var energy: Int = maxEnergy
 
     var lastMoveSuccessful = false
 
